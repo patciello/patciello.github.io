@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section id="about" class="section">
+				<h1>Hello, I'm a Software Development Student</h1>
+				<p>
+					I am an ADS student based in Valença, RJ, currently working as an office assistant. I am passionate about technology, building efficient software
+					solutions, and exploring concepts like 3D printing and system automation.
+				</p>
+			</section>
+
+			<section id="education" class="section">
+				<h2>Education</h2>
+				<div class="card">
+					<h3>Systems Analysis and Development (ADS)</h3>
+					<p>Focusing on foundational programming logic, web development, and database management to build robust applications.</p>
+				</div>
+			</section>
+
+			<section id="projects" class="section">
+				<h2>Projects</h2>
+				<div class="card">
+					<h3>Environmental Management Platform</h3>
+					<p>Developing a custom software solution to manage and track environmental data efficiently for local businesses.</p>
+				</div>
+				<div class="card">
+					<h3>ERP Task Automation</h3>
+					<p>Created automation scripts to streamline repetitive tasks within an enterprise resource planning (ERP) system, improving daily office workflow.</p>
+				</div>
+			</section>
+
+			<section id="contact" class="section">
+				<h2>Contact Me</h2>
+				<p>Feel free to reach out for collaborations or project inquiries.</p>
+
+				<form id="contact-form">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required />
+
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" required></textarea>
+
+					<button type="submit">Send Message</button>
+				</form>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
