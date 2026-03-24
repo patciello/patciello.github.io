@@ -1,133 +1,271 @@
-/* Reset default margins and establish base typography */
+:root {
+	--whitesmoke: #f5f5f5;
+	--almost-black: #111111;
+	--black-gray: #222222;
+	--red: #c82a2a;
+	--grey: #9e9e9e;
+	--white: #ffffff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
-/* Enables smooth scrolling when clicking navigation anchors */
 html {
 	scroll-behavior: smooth;
+	background-color: var(--almost-black);
+	color: var(--whitesmoke);
 }
 
-body {
-	line-height: 1.6;
-	color: #333;
-	background-color: #f4f4f9;
-}
-
-/* Fixed header to ensure the menu is always visible */
 header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #2c3e50;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	mix-blend-mode: difference;
+	color: var(--white);
 	z-index: 1000;
 }
 
-nav ul {
-	list-style-type: none;
+nav {
 	display: flex;
-	justify-content: center;
-	padding: 15px 0;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
 }
 
-nav ul li {
-	margin: 0 15px;
+.logo {
+	font-weight: 700;
+	font-size: 1.2rem;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	color: var(--white);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	gap: 30px;
 }
 
 nav ul li a {
-	color: white;
+	color: var(--whitesmoke);
 	text-decoration: none;
-	font-weight: bold;
-	font-size: 1.1rem;
+	font-size: 1rem;
+	font-weight: 500;
 	transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-	color: #18bc9c;
+	color: var(--red);
 }
 
-/* Section styling: ensures each section fills the screen height */
 .section {
 	min-height: 100vh;
-	padding: 100px 20px 20px; /* Top padding prevents the fixed header from overlapping content */
+	padding: 120px 5vw 50px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	text-align: center;
 }
 
-/* Alternating background colors for clear visual separation between the 4 sections */
-#about {
-	background-color: #ecf0f1;
+.light-bg {
+	background-color: var(--black-gray);
 }
-#education {
-	background-color: #ffffff;
+.dark-bg {
+	background-color: var(--almost-black);
 }
-#projects {
-	background-color: #ecf0f1;
-}
-#contact {
-	background-color: #ffffff;
+.text-white {
+	color: var(--white);
 }
 
-h1,
-h2 {
+h1 {
+	font-size: 13vw;
+	line-height: 0.9;
+	letter-spacing: -0.04em;
+	font-weight: 500;
 	margin-bottom: 20px;
-	color: #2c3e50;
 }
 
-/* Card components for organizing education and project details */
-.card {
-	background: #ffffff;
-	padding: 20px;
-	margin: 10px;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	max-width: 600px;
-	width: 100%;
+h2 {
+	font-size: 8vw;
+	line-height: 0.9;
+	letter-spacing: -0.03em;
+	font-weight: 500;
+	margin-bottom: 40px;
 }
-
-#projects .card {
-	background: #ecf0f1;
-	border: 1px solid #bdc3c7;
-}
-
-/* Form styling */
-form {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-width: 400px;
-}
-
-form label,
-form input,
-form textarea,
-form button {
+h3 {
+	font-size: 2rem;
+	font-weight: 500;
 	margin-bottom: 10px;
-	font-size: 1rem;
+	letter-spacing: -0.02em;
 }
 
-form input,
-form textarea {
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+h4 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+	letter-spacing: -0.02em;
 }
 
-form button {
-	padding: 10px;
-	background-color: #2c3e50;
-	color: white;
-	border: none;
+p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	color: var(--grey);
+}
+
+.avatar {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid var(--white);
+	margin-right: 12px;
+}
+
+.stats-grid {
+	display: flex;
+	gap: 100px;
+	margin-top: 50px;
+}
+
+.stat-item span {
+	font-size: 6vw;
+	font-weight: 500;
+	color: var(--whitesmoke);
+	line-height: 1;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 40px;
+	width: 100%;
+}
+
+.project-card {
+	background: var(--white);
+	padding: 40px;
 	border-radius: 4px;
+	transition:
+		transform 0.4s ease,
+		box-shadow 0.4s ease;
 	cursor: pointer;
 }
 
-form button:hover {
-	background-color: #1a252f;
+.project-card h3 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	color: var(--almost-black);
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.slide-button {
+	display: inline-block;
+	padding: 20px 40px;
+	background-color: var(--almost-black);
+	color: var(--white);
+	text-decoration: none;
+	font-size: 1.5rem;
+	border-radius: 50px;
+	transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+	background-color: var(--red);
+}
+
+.fade-up {
+	opacity: 0;
+	transform: translateY(50px);
+	transition:
+		opacity 0.8s ease-out,
+		transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.delay-1 {
+	transition-delay: 0.2s;
+}
+
+.delay-2 {
+	transition-delay: 0.4s;
+}
+
+.delay-3 {
+	transition-delay: 2s;
+}
+
+/* --- Contact form styles --- */
+.contact-section {
+	padding: 80px 5vw 120px;
+}
+
+.contact-form {
+	max-width: 760px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	padding: 28px;
+	border-radius: 8px;
+}
+
+.contact-field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 18px;
+}
+
+.contact-field label {
+	margin-bottom: 6px;
+	color: var(--whitesmoke);
+}
+
+.contact-field input,
+.contact-field textarea {
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	color: var(--whitesmoke);
+	padding: 12px 14px;
+	border-radius: 6px;
+	font-size: 1rem;
+}
+
+.contact-error {
+	color: #ffb4b4;
+	font-size: 0.9rem;
+	margin-top: 6px;
+}
+
+.contact-actions {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.contact-success {
+	margin-top: 12px;
+	color: #9fe29f;
+	font-size: 1rem;
+}
+
+.contact-submit {
+	background: var(--red);
+	color: var(--white);
+	border: none;
 }

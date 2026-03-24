@@ -3,66 +3,85 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>My Portfolio</title>
+		<title>Portfolio - Fluke Style</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
 			<nav>
+				<div class="logo"><img src="src/images/perfil.jpeg" alt="Minha Foto" class="avatar" />PATCIELLO PORTFOLIO.</div>
 				<ul>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#education">Education</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#home">Sobre mim</a></li>
+					<li><a href="#degree">Formação</a></li>
+					<li><a href="#work">Portifolio</a></li>
+					<li><a href="#contact">Contato</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section id="about" class="section">
-				<h1>Hello, I'm a Software Development Student</h1>
-				<p>
-					I am an ADS student based in Valença, RJ, currently working as an office assistant. I am passionate about technology, building efficient software
-					solutions, and exploring concepts like 3D printing and system automation.
+			<section id="home" class="section hero">
+				<h3 class="fade-up">DÊEM GRAÇAS EM TODAS AS CIRCUNSTÂNCIAS,<br />POIS ESTA É A VONTADE DE DEUS PARA VOCÊS EM CRISTO JESUS.</h3>
+				<p class="fade-up delay-1">1 Tessalonicenses 5:18</p>
+				<br /><br /><br />
+				<h4 class="fade-up delay-3">Sobre Mim</h4>
+				<p class="fade-up delay-3">
+					Olá! Atualmente estou estudando Análise e Desenvolvimento de Sistema (ADS), mesmo sendo Auxiliar de Escritório, eu busco otimizar ao máximo o meu
+					tempo implementando automações e IA, busco ser um funcionário além do padrão, não sendo egoista, mas focando no crescimento mútuo de todos.
 				</p>
 			</section>
 
-			<section id="education" class="section">
-				<h2>Education</h2>
-				<div class="card">
-					<h3>Systems Analysis and Development (ADS)</h3>
-					<p>Focusing on foundational programming logic, web development, and database management to build robust applications.</p>
+			<section id="degree" class="section light-bg">
+				<div class="degree-item fade-up">
+					<h2>Formação.</h2>
+					<p>
+						Atualmente estou estudando programação, tendo desenvolvido alguns projetos em React e React Native manutenção de hardware, suporte entre outras
+						áreas do Ti, tudo isso aliado com a imersão quase completa no inglês. Estou cursando ADS pela Uninter
+					</p>
+				</div>
+
+				<div class="stats-grid">
+					<div class="stat-item fade-up">
+						<span>+ </span><span class="number" data-target="12">0</span><span> anos</span>
+						<p>Experiência como Técnico de TI.</p>
+					</div>
+					<div class="stat-item fade-up">
+						<span class="number" data-target="4">0</span>
+						<p>Principais Linguagens.(React,React Native, Python, JavaScript)</p>
+					</div>
 				</div>
 			</section>
 
-			<section id="projects" class="section">
-				<h2>Projects</h2>
-				<div class="card">
-					<h3>Environmental Management Platform</h3>
-					<p>Developing a custom software solution to manage and track environmental data efficiently for local businesses.</p>
-				</div>
-				<div class="card">
-					<h3>ERP Task Automation</h3>
-					<p>Created automation scripts to streamline repetitive tasks within an enterprise resource planning (ERP) system, improving daily office workflow.</p>
+			<section id="work" class="section dark-bg">
+				<h2 class="fade-up text-white">Portifolio.</h2>
+				<div class="project-grid">
+					<div class="project-card fade-up">
+						<h3>Removedor de Dizima</h3>
+						<p>Aplicativo simples para remoção de dizima em divisões fluantes.</p>
+						<br />
+						<a href="https://removedordedizima.onrender.com" target="_blank"> Removedor Dizima</a>
+					</div>
+					<div class="project-card fade-up delay-1">
+						<h3>4Quest Daytrade</h3>
+						<p>Plataforma inicial para estudo aprofundados e prático sobre o day trade.</p>
+						<br />
+						<a href="https://fourquest-daytrade.onrender.com/" target="_blank"> 4Quest Daytrade</a>
+					</div>
+					<div class="project-card fade-up">
+						<h3>4Oneffice Helper</h3>
+						<p>Plataforma para gerenciamento e controle de processos internos de uma empresa.</p>
+						<br />
+						<a href="https://fouroneffice.onrender.com/" target="_blank">4Oneffice Helper</a>
+					</div>
 				</div>
 			</section>
 
-			<section id="contact" class="section">
-				<h2>Contact Me</h2>
-				<p>Feel free to reach out for collaborations or project inquiries.</p>
-
-				<form id="contact-form">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" required />
-
-					<label for="message">Message:</label>
-					<textarea id="message" name="message" required></textarea>
-
-					<button type="submit">Send Message</button>
-				</form>
+			<section id="contact" class="contact-section light-bg">
+				<script src="script.js"></script>
 			</section>
 		</main>
-
-		<script src="script.js"></script>
 	</body>
 </html>
